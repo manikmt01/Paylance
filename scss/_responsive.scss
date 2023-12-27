@@ -1,0 +1,530 @@
+/*// Extra large devices (large desktops, 1440px and up)*/
+@media (min-width: 2550px) {
+}
+
+/*// Extra large devices (large desktops, 1440px and up)*/
+@media (min-width: 1700px) and (max-width: 2099.98px) {
+}
+
+/*// Extra large devices (large desktops, 1440px and up)*/
+@media (min-width: 1440px) and (max-width: 1699.98px) {
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (max-width: 1300px) {
+  .MobileApplication .box .common_item .itemRight ul li {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+  .MobileApplication .box .common_item .itemImg .media h4,
+  .MobileApplication .box .common_item .itemImg .media .h4 {
+    font-size: 42px;
+  }
+  .MobileApplication .box .common_item .itemRight {
+    padding-left: 0;
+  }
+  .TokenAllocation .titleItem.title02 {
+    width: 290px;
+    right: 14px;
+  }
+  .TokenAllocation .titleItem.title03 {
+    width: 255px;
+  }
+  .TokenAllocation .titleItem.title03 .media-body {
+    margin-left: 25px;
+    top: 20px;
+  }
+  .Roadmap .box .boxItemWrapp .item {
+    width: 480px;
+    min-height: 224px;
+  }
+  .wrapper {
+    background-size: cover;
+  }
+}
+/*// Large devices (desktops, 1100px and up)*/
+@media (max-width: 1100px) {
+  .Paylance .itemLeft h1,
+  .Paylance .itemLeft .h1 {
+    font-size: 41px;
+    line-height: 52px;
+  }
+  .Paylance {
+    padding: 60px 0 80px 0;
+  }
+  .MobileApplication .box .common_item .itemRight ul li {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+  .MobileApplication .box .common_item .itemImg .media h4,
+  .MobileApplication .box .common_item .itemImg .media .h4 {
+    font-size: 34px;
+  }
+  .MobileApplication .box .common_item .itemRight {
+    padding-left: 40px;
+  }
+  .MobileApplication .box .common_item.common_item2 .itemRight {
+    padding-right: 40px;
+  }
+  .TokenAllocation .titleItem {
+    margin: 0 auto;
+    margin-top: 30px !important;
+    position: static;
+    svg {
+      display: none;
+    }
+    .media {
+      display: block;
+      text-align: center;
+      margin: auto;
+      position: static;
+      .media-body {
+        text-align: center;
+        margin: 0 auto;
+        position: static;
+      }
+    }
+  }
+  .TokenAllocation .boxWrapp .tray {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .Roadmap .box .boxItemWrapp .item {
+    width: 375px;
+  }
+}
+/*// Medium devices (tablets, 768px and up)*/
+@media (max-width: 991.98px) {
+  header .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Paylance .itemLeft {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .MobileApplication .box .common_item .itemImg .media {
+    display: block;
+    text-align: center;
+    h4 {
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    .media-body img {
+      width: 200px;
+    }
+  }
+  .MobileApplication .box .common_item .itemRight {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .MobileApplication .box .common_item .itemRight ul li {
+    text-align: center;
+  }
+  .MobileApplication .box .common_item.common_item2 .itemImg .media h4,
+  .MobileApplication .box .common_item.common_item2 .itemImg .media .h4 {
+    position: static;
+    text-align: center;
+  }
+  .MobileApplication .AvailableOn ul {
+    gap: 10px 20px;
+    li a {
+      img {
+        max-height: 50px;
+      }
+    }
+  }
+  .Roadmap .box .boxItemWrapp::after {
+    display: none;
+  }
+  .Roadmap .box .boxItemWrapp .itemLeft .item::after {
+    left: -15px;
+    top: -13px;
+    width: 180px;
+    height: 112%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='183' height='256' viewBox='0 0 183 256' fill='none'%3E%3Cpath d='M183 253L19 253C10.1634 253 3 245.837 3 237L3.00002 19C3.00002 10.1634 10.1635 2.99999 19 2.99999L183 3.00001' stroke='url(%23paint0_linear_2_937)' stroke-opacity='0.7' stroke-width='6'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2_937' x1='183' y1='128' x2='3.00001' y2='128' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.081934' stop-color='%2315BFFD' stop-opacity='0'/%3E%3Cstop offset='0.706057' stop-color='%2315BFFD'/%3E%3Cstop offset='1' stop-color='%23474DDC'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  }
+  .Roadmap .box {
+    padding: 80px 100px;
+  }
+  .Roadmap .box .boxItemWrapp .itemLeft .item::before {
+    display: none;
+  }
+  .Roadmap .box .boxItemWrapp .itemLeft .item .arrow {
+    display: none;
+  }
+  .Roadmap .box .boxItemWrapp .itemRight .item .arrow {
+    display: none;
+  }
+  .Roadmap .box .boxItemWrapp .itemRight,
+  .Roadmap .box .boxItemWrapp .itemLeft {
+    margin-top: 70px;
+  }
+  .Roadmap .box .boxItemWrapp .item {
+    width: 100%;
+  }
+  .Roadmap .box .boxItemWrapp .itemRight .item::before {
+    display: none;
+  }
+  footer .copyright {
+    margin-top: 60px;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .item h4,
+  footer .item .h4 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .itemLeft {
+    width: 100%;
+    max-width: 100%;
+  }
+  footer .itemLeft ul {
+    justify-content: center !important;
+  }
+  .commoinTitle {
+    padding-bottom: 35px;
+  }
+  .MobileApplication .box {
+    padding: 50px 30px;
+  }
+  .MobileApplication .box .common_item .itemRight {
+    padding-left: 0;
+  }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (max-width: 767.98px) {
+  .MobileApplication .box .titleText h2,
+  .MobileApplication .box .titleText .h2 {
+    font-size: 32px;
+  }
+  .MobileApplication .box .titleText p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .MobileApplication .box .titleText {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .commoinTitle h2,
+  .commoinTitle .h2 {
+    font-size: 32px;
+  }
+  .TokenAllocation .boxWrapp {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .Partners .box {
+    padding: 50px 40px;
+    border-radius: 32px;
+  }
+  .commoinTitle p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .TokenAllocation {
+    .boxWrapp .carcale {
+      width: 150px;
+      height: 150px;
+    }
+    .boxWrapp .carcale .box {
+      width: 130px;
+      height: 130px;
+    }
+    .boxWrapp .carcale p {
+      font-size: 12px;
+    }
+    .boxWrapp .carcale h4,
+    .boxWrapp .carcale .h4 {
+      font-size: 28px;
+    }
+    // The diameter of the pie
+    $pie-size: 20rem;
+
+    // The number of colors will define the maximum number of slices
+    // 6 colors = 6 slices maximum
+    $slice-colors: #14b8a6, #3b82f6, #6366f1, #f59e0b, #facc15;
+
+    // Makes the left edge of the first slice start at the top of the pie
+    $pie-rotation-offset: 0.25turn;
+
+    @mixin define-slices() {
+      @for $slice-number from 1 through length($slice-colors) {
+        &:nth-of-type(#{$slice-number}) {
+          // Starting reference rotation
+          $total-previous-rotation: rotate($pie-rotation-offset - 0.18);
+
+          // Combine previous slices rotation
+          @for $i from 1 to $slice-number {
+            // Append current slice rotation to previous slices rotations
+            $total-previous-rotation: $total-previous-rotation
+              rotate(var(--slice#{$i}));
+          }
+
+          // Rotate the current slice as much as all previous slices rotations
+          transform: #{$total-previous-rotation};
+
+          &::before {
+            // This is the actual color of the slice
+            background-color: nth($slice-colors, $slice-number);
+            transform: rotate(var(--slice#{$slice-number})) rotate(-0.5turn);
+          }
+
+          .slice__value {
+            // this is the visible value number of each slice
+
+            // Starting rotation
+            $total-previous-value-rotation: rotate(
+              calc(var(--slice#{$slice-number}) * -0.02)
+            );
+
+            // Offset distance from center of pie - for the first slice only
+            $value-offset: -$pie-size * 0.25;
+
+            @if $slice-number > 1 {
+              // The first slice is skipped (>1) since its rotation is not affected by other slices
+
+              // Offset distance from center of pie - for subsequent slices only
+              $value-offset: -$pie-size * 0.33;
+
+              // Combine all previous slices rotation
+              @for $i from 1 to $slice-number {
+                $total-previous-value-rotation: rotate(
+                    calc(var(--slice#{$i}) * -1)
+                  )
+                  $total-previous-value-rotation;
+              }
+            }
+            transform: translateY(50%)
+              rotate(-0.25turn)
+              rotate(calc(var(--slice#{$slice-number}) * 0.5))
+              translateY($value-offset - 1)
+              $total-previous-value-rotation
+              rotate(0.25turn -$pie-rotation-offset);
+            // transform notes:
+            // The numbers start aligned to the bottom/middle of the slice mask
+            // 1. translateY = move the number to the center of pie chart
+            // 2. rotate = turn by a quarter to account for the slice mask
+            // 6. rotate = turn by half of the slice angle
+            // 4. translateY = push the number up the slice
+            // 5. total-value-rotation = straighten the number by rotating it (accounting for previous slices)
+            // 6. rotate = Account for pie rotation offset
+          }
+        }
+      }
+    }
+
+    .pie {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      width: $pie-size;
+      height: $pie-size;
+      border-radius: 50%;
+      overflow: hidden;
+      // The background of the pie is the same as the first slice
+      background-color: nth($slice-colors, 1);
+    }
+
+    .pie__slice {
+      // This is used as a mask for the slice
+      position: absolute;
+      width: $pie-size;
+      height: $pie-size * 0.5;
+      transform-origin: 50% 100%;
+      &:not(:first-of-type) {
+        // Hidding the overflow of the first slice can visually hide the value number if the slice size is bigger than 50%
+        overflow: hidden;
+      }
+      &::before {
+        // The color fill of the slice
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-origin: 50% 100%;
+      }
+      @include define-slices();
+    }
+
+    .slice__value {
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      transform-origin: 50% 50%;
+      color: #fff;
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      .pie__slice:first-of-type & {
+        // Make the first value bigger
+        font-size: 38px;
+        color: #fff;
+      }
+      .pie--hide-small-values & {
+        color: transparent;
+      }
+    }
+
+    /* ===== CSS fluff ===== */
+
+    .ingredients {
+      padding-top: 1rem;
+      p {
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0.125em;
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          margin-bottom: -0.125em;
+          margin-right: 0.5em;
+          border-radius: 0.25em;
+          background-color: white;
+          box-sizing: border-box;
+          // border: 2px solid white;
+        }
+        @for $ingredient-number from 1 through length($slice-colors) {
+          &:nth-of-type(#{$ingredient-number}) {
+            &::before {
+              background-color: nth($slice-colors, $ingredient-number);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Roadmap .box .boxItemWrapp .itemRight .item::before {
+    display: none;
+  }
+  .Roadmap .box .boxItemWrapp .itemRight .item .arrow {
+    display: none;
+  }
+  .Roadmap .box .boxItemWrapp .itemLeft .item .arrow {
+    display: none;
+  }
+  .Roadmap .box {
+    padding: 80px 25px 80px 25px;
+  }
+  .FrequentlyAsked .box h3,
+  .FrequentlyAsked .box .h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .FrequentlyAsked .box {
+    border-radius: 32px;
+    padding: 60px 30px;
+  }
+  .FrequentlyAsked .box .accordion .accordion-item h2 .accordion-button,
+  .FrequentlyAsked .box .accordion .accordion-item .h2 .accordion-button {
+    font-size: 16px;
+  }
+  .FrequentlyAsked .box .accordion .accordion-collapse .accordion-body p {
+    font-size: 14px;
+  }
+  .FrequentlyAsked .box .accordion .accordion-item {
+    padding: 20px 15px;
+    margin-bottom: 24px;
+  }
+  .MobileApplication .AvailableOn h4,
+  .MobileApplication .AvailableOn .h4 {
+    font-size: 26px;
+    line-height: 25.6px;
+    margin-bottom: 25px;
+  }
+  .Paylance .itemLeft h1,
+  .Paylance .itemLeft .h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .Roadmap .box .boxItemWrapp .itemLeft .item::after,
+  .Roadmap .box .boxItemWrapp .itemRight .item::after {
+    left: -15px;
+    top: -30px;
+    width: 180px;
+    height: 127%;
+  }
+  .Roadmap .box .boxItemWrapp .item h2,
+  .Roadmap .box .boxItemWrapp .item .h2 {
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  .Roadmap .box .boxItemWrapp .item p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Roadmap .box .boxItemWrapp .item h4,
+  .Roadmap .box .boxItemWrapp .item .h4 {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+  .Partners .imagesItem .item img {
+    width: 70%;
+  }
+  .PressMedia .imagesItem .item img {
+    max-height: 70px;
+  }
+  .PressMedia {
+    overflow: hidden;
+  }
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+}
+
+/*Extra small devices (portrait phones, less than 414px)*/
+@media (max-width: 414px) {
+}
+
+/*Extra small devices (portrait phones, less than 375px)*/
+@media (max-width: 375px) {
+}
+
+/*Extra small devices (portrait phones, less than 360px)*/
+@media (max-width: 360px) {
+}
+
+/*Extra small devices (portrait phones, less than 320px)*/
+@media (max-width: 320px) {
+}
+
+/* 
+2560*1440
+2160*1440
+1920×1080
+1600×900
+1536×864
+1440×900
+1366×768    
+1280×720    
+1280×800    
+1280×1024   
+1024×768    
+768×1024
+ */

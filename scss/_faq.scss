@@ -1,0 +1,87 @@
+.FrequentlyAsked {
+  padding-bottom: 80px;
+  .box {
+    border-radius: 32px;
+    background: var(--White, #fff);
+    padding: 80px 80px;
+    h3 {
+      color: var(--font-text-coor, #000746);
+      font-family: Lato;
+      font-size: 37.9px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      margin-bottom: 40px;
+    }
+    .accordion {
+      --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M2 13H26' stroke='%239BF2FC' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M14 2L14 26' stroke='%239BF2FC' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+      --bs-accordion-btn-active-icon: url(../img/-.svg);
+      .accordion-button:not(.collapsed)::after {
+        top: -8px;
+        position: relative;
+      }
+      .accordion-item {
+        padding: 24px;
+        border-radius: 8px;
+        border: 1px solid #f1f1f1;
+        background: var(--White, #fff);
+        margin-bottom: 24px;
+        h2 {
+          .accordion-button {
+            color: var(--font-text-coor, #000746);
+            font-family: Lato;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+          }
+        }
+      }
+      .accordion-collapse {
+        .accordion-body {
+          padding-left: 0;
+          padding-right: 0;
+          p {
+            color: var(--Subtext-Color, #7f83ab);
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .StillQuestions {
+    text-align: center;
+    width: 350px;
+    max-width: 100%;
+    margin: auto;
+    h4 {
+      color: var(--font-text-coor, #000746);
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+    p {
+      color: var(--font-text-coor, #000746);
+      text-align: center;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px; /* 156.25% */
+      a {
+        color: var(--Button-Color, #1560f9);
+      }
+    }
+  }
+}

@@ -1,0 +1,349 @@
+.TokenAllocation {
+  // The diameter of the pie
+  $pie-size: 40rem;
+
+  // The number of colors will define the maximum number of slices
+  // 6 colors = 6 slices maximum
+  $slice-colors: #14b8a6, #3b82f6, #6366f1, #f59e0b, #facc15;
+
+  // Makes the left edge of the first slice start at the top of the pie
+  $pie-rotation-offset: 0.25turn;
+
+  @mixin define-slices() {
+    @for $slice-number from 1 through length($slice-colors) {
+      &:nth-of-type(#{$slice-number}) {
+        // Starting reference rotation
+        $total-previous-rotation: rotate($pie-rotation-offset - 0.18);
+
+        // Combine previous slices rotation
+        @for $i from 1 to $slice-number {
+          // Append current slice rotation to previous slices rotations
+          $total-previous-rotation: $total-previous-rotation
+            rotate(var(--slice#{$i}));
+        }
+
+        // Rotate the current slice as much as all previous slices rotations
+        transform: #{$total-previous-rotation};
+
+        &::before {
+          // This is the actual color of the slice
+          background-color: nth($slice-colors, $slice-number);
+          transform: rotate(var(--slice#{$slice-number})) rotate(-0.5turn);
+        }
+
+        .slice__value {
+          // this is the visible value number of each slice
+
+          // Starting rotation
+          $total-previous-value-rotation: rotate(
+            calc(var(--slice#{$slice-number}) * -0.02)
+          );
+
+          // Offset distance from center of pie - for the first slice only
+          $value-offset: -$pie-size * 0.25;
+
+          @if $slice-number > 1 {
+            // The first slice is skipped (>1) since its rotation is not affected by other slices
+
+            // Offset distance from center of pie - for subsequent slices only
+            $value-offset: -$pie-size * 0.33;
+
+            // Combine all previous slices rotation
+            @for $i from 1 to $slice-number {
+              $total-previous-value-rotation: rotate(
+                  calc(var(--slice#{$i}) * -1)
+                )
+                $total-previous-value-rotation;
+            }
+          }
+          transform: translateY(50%)
+            rotate(-0.25turn)
+            rotate(calc(var(--slice#{$slice-number}) * 0.5))
+            translateY($value-offset - 1)
+            $total-previous-value-rotation
+            rotate(0.25turn -$pie-rotation-offset);
+          // transform notes:
+          // The numbers start aligned to the bottom/middle of the slice mask
+          // 1. translateY = move the number to the center of pie chart
+          // 2. rotate = turn by a quarter to account for the slice mask
+          // 6. rotate = turn by half of the slice angle
+          // 4. translateY = push the number up the slice
+          // 5. total-value-rotation = straighten the number by rotating it (accounting for previous slices)
+          // 6. rotate = Account for pie rotation offset
+        }
+      }
+    }
+  }
+
+  .pie {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: $pie-size;
+    height: $pie-size;
+    border-radius: 50%;
+    overflow: hidden;
+    // The background of the pie is the same as the first slice
+    background-color: nth($slice-colors, 1);
+  }
+
+  .pie__slice {
+    // This is used as a mask for the slice
+    position: absolute;
+    width: $pie-size;
+    height: $pie-size * 0.5;
+    transform-origin: 50% 100%;
+    &:not(:first-of-type) {
+      // Hidding the overflow of the first slice can visually hide the value number if the slice size is bigger than 50%
+      overflow: hidden;
+    }
+    &::before {
+      // The color fill of the slice
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: 50% 100%;
+    }
+    @include define-slices();
+  }
+
+  .slice__value {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transform-origin: 50% 50%;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 37.9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    .pie__slice:first-of-type & {
+      // Make the first value bigger
+      font-size: 38px;
+      color: #fff;
+    }
+    .pie--hide-small-values & {
+      color: transparent;
+    }
+  }
+
+  /* ===== CSS fluff ===== */
+
+  .ingredients {
+    padding-top: 1rem;
+    p {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 0.125em;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-bottom: -0.125em;
+        margin-right: 0.5em;
+        border-radius: 0.25em;
+        background-color: white;
+        box-sizing: border-box;
+        // border: 2px solid white;
+      }
+      @for $ingredient-number from 1 through length($slice-colors) {
+        &:nth-of-type(#{$ingredient-number}) {
+          &::before {
+            background-color: nth($slice-colors, $ingredient-number);
+          }
+        }
+      }
+    }
+  }
+
+  .pie {
+    // margin-left: $pie-size * -0.03;
+    // margin-right: $pie-size * 0.125;
+    box-sizing: content-box;
+  }
+
+  .boxWrapp {
+    background-color: #fff;
+    padding-top: 47px;
+    padding-bottom: 47px;
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    z-index: 1;
+    &::after {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      width: 313px;
+      height: 351px;
+      background-image: url(../img/pie.svg);
+      background-size: 100%;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    .tray {
+      padding-bottom: 206px;
+      padding-top: 131px;
+      position: relative;
+    }
+    .carcale {
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      .box {
+        width: 218px;
+        height: 218px;
+        border-radius: 100%;
+        border: 1px dashed var(--Subtext-Color, #7f83ab);
+        background: var(--White, #fff);
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+      }
+      p {
+        color: var(--Subtext-Color, #7f83ab);
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 4px;
+      }
+      h4 {
+        color: var(--font-text-coor, #000746);
+        font-family: Lato;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
+  .titleItem {
+    position: absolute;
+    .media {
+      svg {
+      }
+      .media-body {
+        margin-left: 15px;
+        width: 310px;
+        max-width: 100%;
+        position: relative;
+        top: -5px;
+        h4 {
+          color: #14b8a6;
+          font-family: Lato;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 16px;
+        }
+        p {
+          margin-bottom: 0;
+          color: var(--Subtext-Color, #7f83ab);
+
+          /* Regular/ Body Caption 12.00px */
+          font-family: Poppins;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+    &.title01 {
+      width: 410px;
+      max-width: 100%;
+      top: 20px;
+      left: 170px;
+      right: 0;
+      margin: auto;
+    }
+    &.title02 {
+      width: 350px;
+      max-width: 100%;
+      top: 50%;
+      right: -5px;
+      .media-body {
+        position: relative;
+        top: 2px;
+        h4 {
+          color: #3b82f6;
+        }
+      }
+    }
+    &.title03 {
+      width: 290px;
+      max-width: 100%;
+      top: 70%;
+      right: 12%;
+      display: block;
+      .media-body {
+        margin-left: 25px;
+        top: 0px;
+        h4 {
+          color: #6366f1;
+        }
+      }
+    }
+    &.title04 {
+      width: 385px;
+      max-width: 100%;
+      bottom: 10%;
+      left: -18%;
+      right: 0;
+      margin: auto;
+      .media-body {
+        margin-right: 15px;
+        margin-left: 0;
+        text-align: right;
+        margin-top: 80px;
+        h4 {
+          color: #f59e0b;
+        }
+      }
+    }
+    &.title05 {
+      width: 325px;
+      max-width: 100%;
+      top: 50%;
+      left: 3%;
+      margin: auto;
+      .media-body {
+        margin-right: 15px;
+        margin-left: 0;
+        text-align: right;
+        margin-top: 22px;
+        h4 {
+          color: #facc15;
+        }
+      }
+    }
+  }
+}
