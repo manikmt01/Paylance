@@ -207,7 +207,7 @@
 @media (max-width: 767.98px) {
   .MobileApplication .box .titleText h2,
   .MobileApplication .box .titleText .h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
   .MobileApplication .box .titleText p {
     font-size: 14px;
@@ -429,6 +429,20 @@
   .Roadmap .box {
     padding: 80px 25px 80px 25px;
   }
+  .Roadmap.masterCardWrapp .box {
+    padding: 50px 15px 50px 15px;
+  }
+  header .navbar-brand img {
+    width: 90px;
+  }
+  .headerTop .headerTopInner p {
+    font-size: 12px;
+  }
+  .FrequentlyAsked .StillQuestions h4,
+  .FrequentlyAsked .StillQuestions .h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
   .FrequentlyAsked .box h3,
   .FrequentlyAsked .box .h3 {
     font-size: 28px;
@@ -483,14 +497,39 @@
     line-height: 30px;
     margin-bottom: 5px;
   }
-  .Partners .imagesItem .item img {
-    width: 70%;
-  }
-  .PressMedia .imagesItem .item img {
-    max-height: 70px;
-  }
   .PressMedia {
     overflow: hidden;
+  }
+  .Partners .imagesItem .item {
+    min-height: auto;
+    padding: 10px 30px;
+    height: 100%;
+  }
+  .PressMedia .imagesItem .item {
+    min-height: 80px;
+    padding: 10px 30px;
+    height: 100%;
+  }
+  .Partners .imagesItem .g-4 {
+    --bs-gutter-y: 12px;
+    --bs-gutter-x: 12px;
+  }
+  .Partners .box {
+    padding: 50px 15px;
+  }
+  .MobileApplication .box .common_item .itemImg .media .media-body img {
+    width: 120px;
+  }
+  .MobileApplication .box .common_item .itemImg .media h4,
+  .MobileApplication .box .common_item .itemImg .media .h4 {
+    font-size: 24px;
+  }
+  .MobileApplication .box .common_item .itemRight ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .MobileApplication .AvailableOn {
+    margin-top: 50px;
   }
 }
 

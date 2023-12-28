@@ -686,3 +686,18 @@ footer {
   }
 }
 // footer end
+// Roadmap start
+.Roadmap {
+  &.masterCardWrapp {
+  }
+  .masterCard {
+    .item {
+      img {
+        border-radius: 32px;
+        background-color: #fff;
+        backdrop-filter: blur(3px);
+      }
+    }
+  }
+}
+// Roadmap end
