@@ -161,7 +161,7 @@ header {
 // header end
 .wrapper {
   background-image: url(../img/bg.svg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -475,7 +475,7 @@ header {
     padding: 80px 60px;
     .boxItemWrapp {
       position: relative;
-      &::after {
+      &::before {
         position: absolute;
         content: '';
         left: 0;
