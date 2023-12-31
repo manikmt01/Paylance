@@ -201,6 +201,9 @@
   .MobileApplication .box .common_item .itemRight {
     padding-left: 0;
   }
+  .Roadmap .box .boxItemWrapp::before {
+    display: none;
+  }
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
@@ -253,7 +256,7 @@
       font-size: 28px;
     }
     // The diameter of the pie
-    $pie-size: 20rem;
+    $pie-size: 19rem;
 
     // The number of colors will define the maximum number of slices
     // 6 colors = 6 slices maximum
@@ -289,7 +292,7 @@
 
             // Starting rotation
             $total-previous-value-rotation: rotate(
-              calc(var(--slice#{$slice-number}) * -0.02)
+              calc(var(--slice#{$slice-number}) * -0.01)
             );
 
             // Offset distance from center of pie - for the first slice only
@@ -530,6 +533,18 @@
   }
   .MobileApplication .AvailableOn {
     margin-top: 50px;
+  }
+  .MobileApplication .AvailableOn ul li a img {
+    max-height: 40px;
+  }
+  .Roadmap .box .boxItemWrapp::before {
+    display: none;
+  }
+  .MobileApplication .box {
+    padding: 50px 15px;
+  }
+  .MobileApplication .AvailableOn ul {
+    gap: 10px 10px;
   }
 }
 
